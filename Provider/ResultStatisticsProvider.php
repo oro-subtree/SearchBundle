@@ -5,7 +5,7 @@ namespace Oro\Bundle\SearchBundle\Provider;
 use Oro\Bundle\SearchBundle\Engine\Indexer;
 use Oro\Bundle\SearchBundle\Query\Result\Item;
 
-class ResultProvider
+class ResultStatisticsProvider
 {
     /**
      * @var Indexer
@@ -23,7 +23,7 @@ class ResultProvider
     /**
      * Returns grouped search results
      *
-     * @param  string $string
+     * @param string $string
      * @return array
      */
     public function getGroupedResults($string)
