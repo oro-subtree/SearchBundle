@@ -1,6 +1,6 @@
 <?php
 
-namespace Oro\Bundle\SearchBundle\Migrations\Schemas\v1_0;
+namespace Oro\Bundle\SearchBundle\Migrations\Schema\v1_0;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
