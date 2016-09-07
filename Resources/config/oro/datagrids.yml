@@ -1,4 +1,4 @@
-datagrid:
+datagrids:
     search-grid:
         source:
             type: search
