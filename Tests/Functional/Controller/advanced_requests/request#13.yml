@@ -1,11 +1,19 @@
 # common test case
 request:
-    query: "from oro_test_item where datetime datetimeValue > 2017-01-01 order_by stringValue max_results 100"
+    query: "from oro_test_item where stringValue != item5 order_by stringValue"
 response:
-    records_count: 7
-    count: 7
+    records_count: 9
+    count: 9
     rest:
         data:
+            -
+                entity_name: Oro\Bundle\TestFrameworkBundle\Entity\Item
+                record_string: item1@mail.com 123-456-100
+                record_url: http://localhost%oro_default_prefix%search/
+            -
+                entity_name: Oro\Bundle\TestFrameworkBundle\Entity\Item
+                record_string: item2@mail.com 200987654
+                record_url: http://localhost%oro_default_prefix%search/
             -
                 entity_name: Oro\Bundle\TestFrameworkBundle\Entity\Item
                 record_string: item3@mail.com 123-456-300
@@ -36,6 +44,16 @@ response:
                 record_url: http://localhost%oro_default_prefix%search/
     soap:
         data:
+            -
+                entityName: Oro\Bundle\TestFrameworkBundle\Entity\Item
+                recordTitle: item1@mail.com 123-456-100
+                recordUrl: http://localhost%oro_default_prefix%search/
+                selectedData: []
+            -
+                entityName: Oro\Bundle\TestFrameworkBundle\Entity\Item
+                recordTitle: item2@mail.com 200987654
+                recordUrl: http://localhost%oro_default_prefix%search/
+                selectedData: []
             -
                 entityName: Oro\Bundle\TestFrameworkBundle\Entity\Item
                 recordTitle: item3@mail.com 123-456-300
